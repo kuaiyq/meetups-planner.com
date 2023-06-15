@@ -6,8 +6,8 @@ import theme from "../theme"
 import ReactRotatingText from "./RotatingText"
 import Logo from "./svg/Logo"
 import SlackIcon from "./svg/SlackIcon"
-import Octocat from "./svg/Octocat"
-import guildLogo from './png/guild_logo.png'
+//import Octocat from "./svg/Octocat"
+import guildLogo from "./png/guild_logo.png"
 
 let Row = styled.div`
   display: flex;
@@ -92,7 +92,7 @@ const speakerFormLink = `https://docs.google.com/forms/d/e/${speakerFormId}/view
 
 export default ({
   backgroundColor = theme.primary,
-  page = `TORONTO`,
+  page = `Meetups`,
 }: Props) => {
   return (
     <Container backgroundColor={backgroundColor}>
@@ -121,14 +121,7 @@ export default ({
           <i className="fa fa-meetup" style={{ fontSize: `32px` }} />
           <LinkText>Join us on Meetup</LinkText>
         </Link>
-        <Link
-          href="https://github.com/torontojs/torontojs.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Octocat width="30px" />
-          <LinkText>Contribute to this site</LinkText>
-        </Link>
+
         <Link
           href="https://www.youtube.com/channel/UC1samyyfqiKmOT6fq3uVO1A"
           target="_blank"
@@ -137,11 +130,7 @@ export default ({
           <i className="fa fa-youtube-play" style={{ fontSize: `32px` }} />
           <LinkText>Tech Talks</LinkText>
         </Link>
-        <Link
-          href={speakerFormLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={speakerFormLink} target="_blank" rel="noopener noreferrer">
           <i className="fa fa-comment" style={{ fontSize: `32px` }} />
           <LinkText>Give a Talk</LinkText>
         </Link>
